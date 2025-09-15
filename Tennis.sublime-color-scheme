@@ -8,7 +8,7 @@
         "tennis_bg_highlight": "#3a454a",
         "tennis_fg": "#c4d3aa",
         "tennis_fg_1": "#abb2bf",
-        "tennis_fg_2": "#503946",
+        "tennis_fg_2": "#9da9a0",
         "tennis_comment": "#36e381",
         "tennis_white": "#abb2bf",
         "tennis_red": "#e67e80",
@@ -19,6 +19,7 @@
         "tennis_blue": "#7fbbb3",
         "tennis_purple": "#d699b6",
         "tennis_visual": "#1c4040",
+        "tennis_cursor": "#de2f63",
         
         // ST ..ish color palette
         "--blueish": "var(tennis_blue)",
@@ -41,15 +42,16 @@
         "shadow_width": "4",
 
         // matching brackets
-        "brackets_foreground": "var(tennis_comment)",
+        "brackets_foreground": "var(tennis_fg)",
         "brackets_options": "foreground glow",
-        "bracket_contents_foreground": "var(tennis_comment)",
+        "bracket_contents_foreground": "var(tennis_fg)",
         "bracket_contents_options": "foreground",
         "tags_foreground": "var(tennis_red)",
         "tags_options": "glow",
 
         // caret
-        "caret": "var(tennis_fg_2)",
+        "caret": "var(tennis_cursor)",
+        "block_caret": "var(tennis_cursor)",
 
         // indent guides
         "active_guide": "var(tennis_red)",
@@ -143,7 +145,7 @@
         {
             "name": "Variables",
             "scope": "entity.name.variable, entity.other.custom-property, support.variable, variable, punctuation.definition.parameter, punctuation.definition.variable",
-            "foreground": "var(tennis_comment)"
+            "foreground": "var(tennis_fg)"
         },
         {
             "name": "Built-in Variables",

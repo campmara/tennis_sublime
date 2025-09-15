@@ -10,17 +10,18 @@
         "tennis_bg_highlight": "#3a454a",
         "tennis_fg": "#c4d3aa",
         "tennis_fg_1": "#abb2bf",
-        "tennis_fg_2": "#503946",
+        "tennis_fg_2": "#9da9a0",
         "tennis_comment": "#36e381",
-        "tennis-white": "#abb2bf",
-        "tennis-red": "#e67e80",
-        "tennis-orange": "#e69875",
-        "tennis-yellow": "#ddbc7f",
-        "tennis-green": "#a7c080",
-        "tennis-cyan": "#83c092",
-        "tennis-blue": "#7fbbb3",
-        "tennis-purple": "#d699b6",
-        "tennis-visual": "#1c4040"
+        "tennis_white": "#abb2bf",
+        "tennis_red": "#e67e80",
+        "tennis_orange": "#e69875",
+        "tennis_yellow": "#ddbc7f",
+        "tennis_green": "#a7c080",
+        "tennis_cyan": "#83c092",
+        "tennis_blue": "#7fbbb3",
+        "tennis_purple": "#d699b6",
+        "tennis_visual": "#1c4040",
+        "tennis_cursor": "#de2f63"
     },
     "rules":
     [
@@ -97,7 +98,7 @@
             "content_margin": [8,0],
             "max_margin_trim": 0,
             "hit_test_level": 0,
-            "layer0.tint": "var(tennis_bg)",
+            "layer0.tint": "var(tennis_visual)",
             "layer0.inner_margin": [10, 10],
             "layer0.opacity": 1
         },
