@@ -1,0 +1,411 @@
+{
+    "name": "Tennis",
+    "variables":
+    {
+        // base16 color palette
+        "tennis_bg": "#173030",
+        "tennis_bg_1": "#325252",
+        "tennis_bg_highlight": "#3a454a",
+        "tennis_fg": "#c4d3aa",
+        "tennis_fg_1": "#abb2bf",
+        "tennis_fg_2": "#503946",
+        "tennis_comment": "#36e381",
+        "tennis_white": "#abb2bf",
+        "tennis_red": "#e67e80",
+        "tennis_orange": "#e69875",
+        "tennis_yellow": "#ddbc7f",
+        "tennis_green": "#a7c080",
+        "tennis_cyan": "#83c092",
+        "tennis_blue": "#7fbbb3",
+        "tennis_purple": "#d699b6",
+        "tennis_visual": "#1c4040",
+        
+        // ST ..ish color palette
+        "--blueish": "var(tennis_blue)",
+        "--cyanish": "var(tennis_cyan)",
+        "--greenish": "var(tennis_green)",
+        "--orangish": "var(tennis_orange)",
+        "--pinkish": "var(tennis_purple)",
+        "--purplish": "var(tennis_purple)",
+        "--redish": "var(tennis_red)",
+        "--yellowish": "var(tennis_yellow)",
+    },
+    "globals":
+    {
+        "accent": "var(tennis_yellow)",
+        "foreground": "var(tennis_fg)",
+        "background": "var(tennis_bg)",
+        "invisibles": "var(tennis_fg_1)",
+        "fold_marker": "var(tennis_fg_1)",
+        "shadow": "color(black alpha(10%))",
+        "shadow_width": "4",
+
+        // matching brackets
+        "brackets_foreground": "var(tennis_comment)",
+        "brackets_options": "foreground glow",
+        "bracket_contents_foreground": "var(tennis_comment)",
+        "bracket_contents_options": "foreground",
+        "tags_foreground": "var(tennis_red)",
+        "tags_options": "glow",
+
+        // caret
+        "caret": "var(tennis_fg_2)",
+
+        // indent guides
+        "active_guide": "var(tennis_red)",
+        "stack_guide": "var(tennis_fg)",
+        "guide": "var(tennis_bg_highlight)",
+        
+        // gutter
+        "gutter_foreground": "var(tennis_fg)",
+        "gutter_foreground_highlight": "var(tennis_fg_2)",
+        "line_diff_width": "2",
+        
+        // active line
+        "line_highlight": "var(tennis_visual)",
+        
+        // selections
+        "selection": "var(tennis_bg_highlight)",
+        "selection_border": "var(tennis_bg_1)",
+        "selection_corner_style": "rounded",
+    },
+    "rules":
+    [
+        {
+            "name": "Comments",
+            "scope": "comment, punctuation.definition.comment",
+            "foreground": "var(tennis_comment)"
+        },
+        {
+            "name": "Delimiters",
+            "scope": "punctuation.accessor, punctuation.separator, punctuation.terminator",
+            "foreground": "var(tennis_cyan)"
+        },
+        {
+            "name": "Definition Punctuation",
+            "scope": "punctuation.definition",
+            "foreground": "var(tennis_cyan)"
+        },
+        {
+            "name": "Section Punctuation",
+            "scope": "punctuation.section",
+            "foreground": "var(tennis_fg_1)"
+        },
+        {
+            "name": "Embedded Punctuation",
+            "scope": "meta.embedded punctuation.section.embedded",
+            "foreground": "var(tennis_cyan)",
+        },
+        {
+            "name": "Interpolation Punctuation",
+            "scope": "meta.interpolation punctuation.section.interpolation, meta.interpolation punctuation.definition.variable - meta.interpolation variable",
+            "foreground": "var(tennis_cyan)",
+        },
+
+        // Keywords
+        {
+            "name": "Keywords",
+            "scope": "keyword, keyword.operator.word",
+            "foreground": "var(tennis_purple)"
+        },
+        {
+            "name": "Operators",
+            "scope": "keyword.operator",
+            "foreground": "var(tennis_red)"
+        },
+
+        // Classes, Functions, Types, Variables, ...
+        {
+            "name": "Entities",
+            "scope": "entity",
+            "foreground": "var(tennis_yellow)"
+        },
+        {
+            "name": "Classes",
+            "scope": "entity.name.class, entity.name.type.class, entity.other.inherited-class, support.class",
+            "foreground": "var(tennis_yellow)"
+        },
+        {
+            "name": "Functions",
+            "scope": "entity.name.function, support.function, variable.function, keyword.other.special-method, entity.name.function punctuation.definition.variable, support.function punctuation.definition.variable, variable.function punctuation.definition.variable",
+            "foreground": "var(tennis_blue)"
+        },
+        {
+            "name": "Mapping keys",
+            "scope": "meta.mapping.key, meta.mapping.key string, entity.name.key",
+            "foreground": "var(tennis_purple)",
+        },
+        {
+            "name": "Types",
+            "scope": "keyword.declaration, storage, support.type",
+            "foreground": "var(tennis_purple)"
+        },
+        {
+            "name": "Variables",
+            "scope": "entity.name.variable, entity.other.custom-property, support.variable, variable, punctuation.definition.parameter, punctuation.definition.variable",
+            "foreground": "var(tennis_comment)"
+        },
+        {
+            "name": "Built-in Variables",
+            "scope": "variable.language, variable.language punctuation.definition.variable",
+            "foreground": "var(tennis_red)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Annotation Variables",
+            "scope": "variable.annotation, variable.annotation punctuation.definition.variable",
+            "foreground": "var(tennis_red)"
+        },
+
+        // Literals
+        {
+            "name": "Constants",
+            "scope": "constant, keyword.other.unit, constant punctuation.definition",
+            "foreground": "var(tennis_orange)"
+        },
+        {
+            "name": "Built-in Constants",
+            "scope": "constant.language, constant.language punctuation.definition, support.constant, support.constant punctuation.definition",
+            "foreground": "var(tennis_orange)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Escape Characters",
+            "scope": "constant.character.escape",
+            "foreground": "var(tennis_cyan)"
+        },
+        {
+            "name": "Placeholder Characters",
+            "scope": "constant.other.placeholder, constant.other.wildcard, constant.other.placeholder punctuation.definition",
+            "foreground": "var(tennis_cyan)"
+        },
+        {
+            "name": "Symbols",
+            "scope": "constant.other.symbol, constant.other.symbol punctuation.definition.constant",
+            "foreground": "var(tennis_green)"
+        },
+        {
+            "name": "Numbers",
+            "scope": "constant.numeric, punctuation.separator.decimal",
+            "foreground": "var(tennis_orange)"
+        },
+        {
+            "name": "Regular Expressions",
+            "scope": "meta.string.regexp, string.regexp",
+            "foreground": "var(tennis_cyan)"
+        },
+        {
+            "name": "Strings",
+            "scope": "string",
+            "foreground": "var(tennis_green)"
+        },
+        {
+            "name": "Invalid",
+            "scope": "invalid.illegal",
+            "foreground": "var(tennis_bg)",
+            "background": "var(tennis_red)"
+        },
+
+        // CSS
+        {
+            "name": "CSS Protperty Names",
+            "scope": "support.type.property-name",
+            "foreground": "var(tennis_purple)",
+        },
+
+        // HTML / XML
+        {
+            "name": "Tags",
+            "scope": "entity.name.tag",
+            "foreground": "var(tennis_red)"
+        },
+        {
+            "name": "Attributes",
+            "scope": "entity.other.attribute-name, entity.other.attribute-name punctuation.definition",
+            "foreground": "var(tennis_orange)"
+        },
+        {
+            "name": "Attribute IDs",
+            "scope": "entity.other.attribute-name.id, entity.other.attribute-name.id punctuation.definition",
+            "foreground": "var(tennis_cyan)"
+        },
+
+        // Markup Blocks
+        {
+            "name": "Headings",
+            "scope": "markup.heading punctuation.definition.heading, markup.heading, entity.name.section",
+            "foreground": "var(tennis_cyan)"
+        },
+        {
+            "name": "Block Quotes",
+            "scope": "markup.quote",
+            "background": "color(var(tennis_bg_highlight) alpha(10%))"
+        },
+        {
+            "name": "Block Quotes Marker",
+            "scope": "markup.quote punctuation.definition.blockquote",
+            "foreground": "var(tennis_fg_2)",
+            "background": "var(tennis_fg_2)"
+        },
+        {
+            "name": "Github Alert Note Marker",
+            "scope": "markup.quote.alert.note punctuation.definition.blockquote",
+            "foreground": "var(--greenish)",
+            "background": "var(--greenish)"
+        },
+        {
+            "name": "Github Alert Note Heading",
+            "scope": "markup.heading.alert.note, markup.heading.alert.note punctuation.definition.heading",
+            "foreground": "var(tennis_fg_2)",
+            "font_style": "bold"
+        },
+        {
+            "name": "Github Alert Warning Marker",
+            "scope": "markup.quote.alert.warning punctuation.definition.blockquote",
+            "foreground": "var(--yellowish)",
+            "background": "var(--yellowish)"
+        },
+        {
+            "name": "Github Alert Warning Heading",
+            "scope": "markup.heading.alert.warning, markup.heading.alert.warning punctuation.definition.heading",
+            "foreground": "var(tennis_fg_2)",
+            "font_style": "bold"
+        },
+        {
+            "name": "Github Alert Caution Marker",
+            "scope": "markup.quote.alert.caution punctuation.definition.blockquote",
+            "foreground": "var(--redish)",
+            "background": "var(--redish)"
+        },
+        {
+            "name": "Github Alert Caution Heading",
+            "scope": "markup.heading.alert.caution, markup.heading.alert.caution punctuation.definition.heading",
+            "foreground": "var(tennis_fg_2)",
+            "font_style": "bold"
+        },
+        {
+            "name": "Code Blocks",
+            "scope": "markup.raw, meta.code-fence",
+            "background": "color(var(tennis_bg_highlight) alpha(10%))"
+        },
+        {
+            "name": "Code Blocks",
+            "scope": "meta.code-fence punctuation.definition.raw",
+            "foreground": "var(tennis_fg_1)"
+        },
+        {
+            "name": "List Punctuation",
+            "scope": "markup.list.numbered.bullet, markup.list.numbered.bullet, punctuation.definition.list_item",
+            "foreground": "var(tennis_red)"
+        },
+        {
+            "name": "Separator",
+            "scope": "meta.separator",
+            "foreground": "var(tennis_bg_highlight)",
+            "background": "color(var(tennis_bg_highlight) alpha(10%))"
+        },
+        {
+            "name": "Table Cell Separators",
+            "scope": "punctuation.separator.table-cell, punctuation.section.table-header",
+            "foreground": "var(tennis_fg)",
+        },
+
+        // Markup Inlines
+        {
+            "name": "Bold",
+            "scope": "markup.bold",
+            "font_style": "bold"
+        },
+        {
+            "name": "Italic",
+            "scope": "markup.italic",
+            "font_style": "italic"
+        },
+        {
+            "name": "Bold Italic",
+            "scope": "markup.bold & markup.italic",
+            "font_style": "bold italic"
+        },
+        {
+            "name": "Underline",
+            "scope": "markup.underline",
+            "font_style": "underline"
+        },
+        {
+            "name": "Strikethrough",
+            "scope": "markup.strikethrough, punctuation.definition.strikethrough",
+            "foreground": "var(tennis_fg)",
+        },
+        {
+            "name": "Inline Code",
+            "scope": "markup.raw.inline, punctuation.definition.raw",
+            "foreground": "var(tennis_green)"
+        },
+        {
+            "name": "Link Text",
+            "scope": "meta.image, meta.link",
+            "foreground": "var(tennis_red)"
+        },
+        {
+            "name": "Link Url",
+            "scope": "markup.underline.link",
+            "foreground": "var(tennis_orange)"
+        },
+
+        // Diff Marker
+        {
+            "name": "Inserted",
+            "scope": "markup.inserted",
+            "foreground": "var(--greenish)"
+        },
+        {
+            "name": "Deleted",
+            "scope": "markup.deleted",
+            "foreground": "var(--redish)"
+        },
+        {
+            "name": "Changed",
+            "scope": "markup.changed",
+            "foreground": "var(--orangish)"
+        },
+        {
+            "name": "Ignored",
+            "scope": "markup.ignored",
+            "foreground": "var(tennis_bg_highlight)"
+        },
+        {
+            "name": "Untracked",
+            "scope": "markup.untracked",
+            "foreground": "var(tennis_bg_highlight)"
+        },
+
+        // Build System messages & Linter Marker
+        {
+            "name": "Info",
+            "scope": "markup.info, message.info",
+            "foreground": "var(--greenish)"
+        },
+        {
+            "name": "Error",
+            "scope": "markup.error, message.error",
+            "foreground": "var(--redish)"
+        },
+        {
+            "name": "Warning",
+            "scope": "markup.warning, message.warning",
+            "foreground": "var(--orangish)"
+        },
+
+        // Sublime Text Syntax Test Results
+        {
+            "name": "Actual Separator",
+            "scope": "meta.path.syntax-tests",
+            "background": "color(var(tennis_bg_highlight) alpha(10%))"
+        },
+        {
+            "name": "Actual Separator",
+            "scope": "meta.separator.syntax-tests",
+            "background": "var(tennis_bg)"
+        }
+    ]
+}
